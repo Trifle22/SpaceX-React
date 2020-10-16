@@ -1,7 +1,7 @@
 import React from 'react';
 import './features.css';
-import RellaxWrapper from 'react-rellax-wrapper';
 import Main from '../Main/Main';
+import RellaxWrapper from 'react-rellax-wrapper';
 
 const rocketImages = {
   'Falcon 1' : 'falcon-1',
@@ -17,11 +17,9 @@ const Features = ({
   mass, 
   payload_weights: payloadWeights, 
   description
-}) => {
-
-  return (
+}) => (
     <>
-    <Main/>
+    <Main rocket={ name }/>
     <section className="features">
 		<h2 className="features-title">
 			{name}  
@@ -72,7 +70,6 @@ const Features = ({
 		</div>
 	</section>
     </>
-  )
-};
+  );
 
 export default Features;
