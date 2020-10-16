@@ -12,8 +12,10 @@ const Main = ({ rocket }) => {
 
   return (
   <section className="main">
-    <h1 className="title">{rocket}</h1>
-    <div className="video-container">
+    <h1 className="title">{
+      rocket ? rocket : 'Calendar SpaceX'
+      }</h1>
+    {rocket && <div className="video-container">
       <video className="video" 
       autoPlay 
       loop 
@@ -23,7 +25,7 @@ const Main = ({ rocket }) => {
           video.other}.mp4`
         }
       />
-    </div>
+    </div>}
   </section>
 
 )};
